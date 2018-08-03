@@ -3,20 +3,9 @@
 <head>
 	<!--baseTagToken-->
 	<!--headscriptToken-->
-    <style id="antiClickjack">body{display:none !important;}</style>
-    <script type="text/javascript">
-        if (self === top) {
-            var antiClickjack = document.getElementById("antiClickjack");
-            antiClickjack.parentNode.removeChild(antiClickjack);
-        } else {
-            top.location = self.location;
-        }
-    </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Storefront</title>
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-	<link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>GS Storefront</title>
 	<link rel="stylesheet" href="css/bootstrap-451.css" data-group="source" />
 	<link rel="stylesheet" href="css/editor.css" data-group="source" />
 	<link rel="stylesheet" href="css/theme.css" data-group="source" />
@@ -43,16 +32,16 @@
 </head>
 <!--[if (gte IE 9)|!(IE)]><!-->
 <body ng-cloak ng-class="ng-cloak">
-<section>
+<section class="main-wrapper">
     <section ng-hide="Four51User.isAuthenticated() || isAnon" class="container">
         <login />
     </section>
     <section ng-if="Four51User.isAuthenticated()" id="content">
         <section class="hidden-print">
-            <navigation />
+            <branding />
         </section>
         <section class="hidden-print">
-            <branding />
+            <navigation />
         </section>
         <section class="container-view">
             <ng-view autoscroll />
@@ -85,6 +74,8 @@
     <script src="lib/angular/plugins/ngAutocomplete.js" data-group="resources"></script>
     <script src="lib/oc/anonRouter.js" data-group="resources"></script>
     <script src="lib/oc/ordercloud-specforms.js" data-group="resources"></script>
+    <script src="lib/oc/carousel.js" data-group="resources"></script>
+    <script src="lib/oc/categoryCollapse.js" data-group="resources"></script>
 
     <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyCIlcbzwi4Er8psS33a6QmcybuqDtyqjh4&libraries=places"></script>
 
