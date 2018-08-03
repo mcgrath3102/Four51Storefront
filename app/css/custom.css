@@ -28,9 +28,18 @@ Template: Howdy
     background-color: transparent;
 }
 
+
+
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
     color: #E1251B;
+        background-color: #ececec;
 }
+
+.navbar-default {
+    border-color: #fff;
+}
+
+
 
 .navbar .container .navbar-nav.pull-right li a i:first-of-type {
     border-color: #fff;
