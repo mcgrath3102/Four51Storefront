@@ -1,12 +1,10 @@
 <section>
     <nav id="451qa_nav_hdr" class="nav">
         <ul>
-            <li class="hidden-sm hidden-xs">
+            <li class="hidden-lg hidden-md hidden-sm hidden-xs">
                 <span ng-click="toggleNav()"><i class="fa fa-bars" ng-class="{ 'text-info': navStatus.visible }"></i></span>
             </li>
-            <li>
-                <span id="451_lbl_curcat" class="text-primary" ng-bind-html="currentCategory.Name || '  {{'Categories' | r | xlat}}'"></span>
-            </li>
+
             <li class="pull-right">
                 <a href="search">
                     <span><i class="fa fa-search text-primary"></i></span>
@@ -15,11 +13,11 @@
         </ul>
     </nav>
     <div class="row">
-        <aside class="col-md-3 visible-md visible-lg" ng-if="navStatus.visible">
+        <aside ng-if="!isActive('catalog')" class="col-md-3 visible-md visible-lg" ng-if="navStatus.visible">
             <div class="panel panel-default panel-nav">
                 <div class="panel-heading">
                     <h3 class="panel-title">
-                        {{'Category List' | r | xlat}}
+                        {{'Promotions' | r | xlat}}
                     </h3>
                 </div>
                 <nav class="nav 451qa_sidenav panel-body">
